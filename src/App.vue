@@ -127,20 +127,6 @@
       axios.get('https://swapi.co/api/people')
         .then(response => {
           this.characters.all = response.data.results
-          // var nextPage = response.data.next
-          // while (nextPage != null) {
-          //   axios.get(nextPage)
-          //     .then(response => {
-          //       var charCount = response.data.results.length
-          //       for (var i = 0; i < charCount; i++) {
-          //         this.characters.all.push(response.data.results[i])
-          //       }
-          //       nextPage = response.data.next
-          //     })
-          //     .catch(e => {
-          //       this.errors.push(e)
-          //     })
-          // }
         })
         .catch(e => {
           this.errors.push(e)
