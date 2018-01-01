@@ -1,0 +1,10 @@
+.block {
+  background-color: #fff;
+  margin: 0 auto;
+  box-shadow: $block-shadow-one, $block-shadow-two;
+  border-radius: $radius-medium;
+
+  &--cushion {
+    padding: $gutter;
+  }
+}

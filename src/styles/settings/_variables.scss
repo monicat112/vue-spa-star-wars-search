@@ -1,0 +1,63 @@
+// Colors
+$text-color: #333333;
+$blue: #52a2ff;
+$blue-dark: #388aea;
+
+$linnen-white: #FAFBFC;
+$hoth-white: #f7f8fa; // background
+$cloud-gray: #EDEEF0; // search divider
+$silver: #e1e2e6; // search field
+$silver-two: #E1E2E6; // search border
+$at-at-gray: #bfbfbf; // no results text
+$pebble-gray: #b9bbc0; // search placehoder, meta
+$smoke-gray: #abadb0; // labels
+$charcoal: #4c4c4c; // search input
+
+$shadow-color-lighter: rgba(0,0,0,0.04);
+$shadow-color-light: rgba(0,0,0,0.05);
+$shadow-color-dark: rgba(0,0,0,0.06);
+$shadow-color-darker: rgba(0,0,0,0.1);
+
+// Shadows
+$block-shadow-one: 0 1px 3px $shadow-color-lighter;
+$block-shadow-two: 0 4px 14px $shadow-color-lighter;
+
+$form-item-shadow-one: 0 1px 1px $shadow-color-lighter;
+$form-item-shadow-two: 0 2px 4px $shadow-color-light;
+
+// Sizes
+$max-width: 580px;
+$gutter: 15px;
+
+$radius-small: 3px;
+$radius-medium: 4px;
+
+$form-item-height: 35px;
+$form-item-height-bigger: 38px;
+$form-item-pad: 6px 10px;
+$form-item-pad-bigger: 10px $gutter;
+
+$third: 33.333%;
+$two-third: 66.666%;
+
+$box-margin-small: 20px;
+$box-margin-medium: 45px;
+$box-margin-large: 55px;
+
+$transition-short: 100ms;
+
+// Text
+$font-main: 'Montserrat', sans-serif;
+$fw-reg: 400;
+$fw-med: 500;
+
+$ts-smaller: 1.3rem;
+$ts-small: 1.4rem;
+$ts-body: 1.6rem;
+$ts-big: 2.2rem;
+
+$text-lh: 1.4;
+$text-lh-small: 1.2;
+
+// Breakpoints
+$break-small: 430px;

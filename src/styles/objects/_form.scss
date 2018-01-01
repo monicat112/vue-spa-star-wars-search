@@ -1,0 +1,50 @@
+/*
+* Based off Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+
+input,
+select {
+  height: $form-item-height;
+  padding: $form-item-pad; /* The vertical padding centers text on FF, ignored by Webkit */
+  border-radius: $radius-medium;
+  box-shadow: none;
+}
+
+input {
+  background-color: $linnen-white;
+  color: $charcoal;
+  border: 1px solid $silver-two;
+  box-shadow: 0 1px 1px $shadow-color-darker inset;
+}
+
+.form-item-bigger {
+  height: $form-item-height-bigger;
+  padding: $form-item-pad-bigger;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $pebble-gray;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $pebble-gray;
+  opacity: 1;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $pebble-gray;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $pebble-gray;
+}
+
+/* Removes awkward default styles on some inputs for iOS */
+input,
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}

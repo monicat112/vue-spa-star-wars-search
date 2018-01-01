@@ -1,0 +1,60 @@
+button {
+  font-family: $font-main;
+  font-weight: $fw-reg;
+  font-size: $ts-small;
+  line-height: 1;
+  background: $blue;
+  border: none;
+  border-radius: $radius-small;
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 $gutter;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  box-shadow: $form-item-shadow-one, 0 1px 3px $shadow-color-dark;
+  transition: all $transition-short ease-in;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:hover, &:focus {
+    background: $blue-dark;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: $form-item-shadow-one, 0 3px 2px $shadow-color-dark;
+    transform: translateY(-1px);
+    transition: all $transition-short;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: $form-item-shadow-one, 0 1px 2px $shadow-color-dark;
+  }
+}
+
+.ripple {
+  position: absolute;
+  background: $shadow-color-darker;
+  border-radius: 100%;
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.ripple.show {
+  animation: ripple 500ms ease-out;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+

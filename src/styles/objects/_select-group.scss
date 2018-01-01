@@ -1,0 +1,28 @@
+.select-group {
+
+  margin-bottom: $box-margin-medium;
+
+  &__title {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+}
+
+@include break($break-small) {
+
+  .select-group {
+    margin-bottom: 0;
+
+    &__title {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+
+    &__select {
+      margin-left: $gutter;
+    }
+
+  }
+
+}

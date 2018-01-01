@@ -1,0 +1,38 @@
+@mixin ie10-grid($width){
+  width: $width;
+  max-width: $width;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--centered {
+    align-items: center;
+  }
+
+}
+
+.grid-cell {
+  flex: 0 0 100%;
+  @include ie10-grid(100%);
+}
+
+@include break($break-small) {
+
+  .grid-cell--md-1of3 {
+    flex: 0 0 $third;
+    @include ie10-grid($third);
+  }
+
+  .grid-cell--md-2of3 {
+    flex: 0 0 $two-third;
+    @include ie10-grid($two-third);
+  }
+
+  .grid-cell--gender {
+    order: 1;
+    text-align: right;
+  }
+
+}

@@ -1,0 +1,80 @@
+.select-wrap {
+  $side-padding: $gutter;
+  $arrow-width: 15px;
+  $arrow-height: 8px;
+  $arrow-left-space: 12px;
+
+  background-color: #fff;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  box-shadow: $form-item-shadow-one, $form-item-shadow-two;
+  border-radius: $radius-small;
+
+  select {
+    font-size: $ts-small;
+    font-family: $font-main;
+    font-weight: $fw-med;
+    cursor: pointer;
+    box-shadow: none;
+    background: transparent;
+    width: 100%;
+    border: 1px solid $shadow-color-lighter;
+    padding-right: ($arrow-width + $side-padding + $arrow-left-space);
+    padding-left: $side-padding;
+    border-radius: $radius-small;
+    // Removes default browser styels
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  // &:before {
+  //   @include pseudo-absolute;
+  //   z-index: -1;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   right: $side-padding;
+  //   pointer-events: none;
+  //   border-top: $arrow-height solid #666;
+  //   border-left: ($arrow-width/2) solid transparent;
+  //   border-right: ($arrow-width/2) solid transparent;
+  //   // background: url ('images/select-arrow.svg');
+  // }
+  &:after {
+    content: '';
+    display: block;
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: ($arrow-width*2) + $side-padding + $arrow-left-space;
+    height: 100%;
+    background: #fff;
+    border-radius: $radius-small;
+    pointer-events: none;
+  }
+
+  .select-wrap__arrow {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    right: $side-padding;
+    pointer-events: none;
+  }
+}
+
+// Firefox fix
+// :-moz-any(.select-wrap){
+//   &:before {
+//     pointer-events: none;
+//     z-index: 1;
+//   }
+//   &:after {
+//     z-index: 0;
+//     // height: calc(#{$height} - 4px);
+//     right: 2px;
+//     top: 2px;
+//   }
+// }

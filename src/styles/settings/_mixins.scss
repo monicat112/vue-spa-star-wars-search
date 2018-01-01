@@ -1,0 +1,30 @@
+@mixin break($break, $type: min) {
+  @if $type == max {
+    @media (max-width: ($break - 1px)) { @content; }
+  } @else {
+    @media (min-width: $break) { @content; }
+  }
+}
+
+@mixin pseudo-absolute {
+  position: absolute;
+  content: '';
+  display: block;
+}
+
+@mixin plain-list {
+  margin: 0;
+  padding: 0;
+  li {
+   margin: 0;
+   list-style: none;
+  }
+}
+
+@mixin float-clear {
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}

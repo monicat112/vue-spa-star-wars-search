@@ -1,0 +1,38 @@
+.search-results {
+  @include plain-list;
+
+  &__item {
+    list-style-type: none;
+    padding: $gutter;
+    border-bottom: 1px solid $cloud-gray;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+  }
+
+  // &__title {}
+
+  &__meta-list {
+    color: $pebble-gray;
+    margin: 3px 0 0;
+    font-size: $ts-small;
+    span {
+      display: inline-block;
+    }
+    span:after {
+      content: '';
+      display: inline-block;
+      background: $pebble-gray;
+      width: 0.25em;
+      height: 0.25em;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+    span:last-of-type:after {
+      content: none;
+    }
+  }
+
+}

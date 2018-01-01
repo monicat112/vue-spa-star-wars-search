@@ -1,0 +1,36 @@
+.no-results {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+
+  &__items {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  &__icon {
+    animation: vader-bounce 3.5s ease-in-out infinite;
+  }
+
+  &__text {
+    font-size: $ts-big;
+    color: $at-at-gray;
+    font-weight: $fw-med;
+    margin: 18px 0 0;
+  }
+
+}
+
+@keyframes vader-bounce {
+
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+
+  45% {
+    transform: translateY(6px) scale(1.05);
+  }
+
+}

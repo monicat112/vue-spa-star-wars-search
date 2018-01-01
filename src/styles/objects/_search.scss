@@ -1,0 +1,29 @@
+.search {
+
+  &__input-wrap {
+    margin-bottom: $gutter;
+    input {
+      width: 100%;
+    }
+  }
+
+}
+
+@include break($break-small) {
+
+  .search {
+    display: flex;
+
+    &__input-wrap {
+      margin-bottom: 0;
+      flex: 1 0 auto;
+      padding-right: $gutter;
+    }
+
+    &__button-wrap {
+      flex: 0 1 auto;
+    }
+
+  }
+
+}
