@@ -29,18 +29,6 @@
     -moz-appearance: none;
   }
 
-  // &:before {
-  //   @include pseudo-absolute;
-  //   z-index: -1;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   right: $side-padding;
-  //   pointer-events: none;
-  //   border-top: $arrow-height solid #666;
-  //   border-left: ($arrow-width/2) solid transparent;
-  //   border-right: ($arrow-width/2) solid transparent;
-  //   // background: url ('images/select-arrow.svg');
-  // }
   &:after {
     content: '';
     display: block;
@@ -64,17 +52,3 @@
     pointer-events: none;
   }
 }
-
-// Firefox fix
-// :-moz-any(.select-wrap){
-//   &:before {
-//     pointer-events: none;
-//     z-index: 1;
-//   }
-//   &:after {
-//     z-index: 0;
-//     // height: calc(#{$height} - 4px);
-//     right: 2px;
-//     top: 2px;
-//   }
-// }
