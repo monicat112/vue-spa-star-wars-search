@@ -7,7 +7,7 @@
           <input id="search-field" type="text" v-model="search" placeholder="Search by character name" class="form-item-bigger">
         </div>
         <div class="search__button-wrap">
-          <button type="button" v-on:click="listBySearch()" class="search__button form-item-bigger">Search</button>
+          <button type="button" v-on:click="listBySearch()" id="search-button" class="search__button form-item-bigger">Search</button>
         </div>
       </form>
     </div>
@@ -76,6 +76,14 @@
 <script>
   import axios from 'axios'
   import pluralize from 'pluralize'
+
+  // enter to search
+  function handleEnter (e) {
+    if (e.keyCode === 13) {
+      document.getElementById('search-button').click()
+    }
+  }
+  window.addEventListener('keydown', handleEnter)
 
   function capitalize (value) {
     if (!value) return ''
